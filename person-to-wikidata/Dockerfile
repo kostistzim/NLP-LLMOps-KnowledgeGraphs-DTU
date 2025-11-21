@@ -2,20 +2,18 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependencies directly
+# Install dependencies
 RUN pip install --no-cache-dir \
     fastapi==0.115.5 \
     uvicorn[standard]==0.32.1 \
     pydantic==2.10.3 \
-    textblob==0.18.0
+    httpx==0.27.2
 
-# Download textblob data
-RUN python -m textblob.download_corpora
-
-# Copy application files
+# Copy application code
+COPY wikidata_client.py .
+COPY entity_linker.py .
+COPY property_queries.py .
 COPY main.py .
-COPY sentiment_analyzer.py .
-COPY language_detector.py .
 
 # Expose port
 EXPOSE 8000

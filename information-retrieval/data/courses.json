@@ -1,0 +1,827 @@
+{
+  "02402": {
+    "title": "02402 Statistics (Polytechnical Foundation)",
+    "learning-objectives": [
+      "Estimate and interpret simple summary statistics, such as mean, standard deviation, variance, median and quartiles as well as correlation",
+      "Apply simple graphical techniques, including histograms, qq-normal plots, and box plots",
+      "Identify and describe probability distributions, including Poisson, binomial, exponential and the normal distribution using Python",
+      "Compare different statistical methods",
+      "Apply and interpret important statistical concepts, such as the formulation of models, parameter estimation, construction of confidence intervals and hypothesis testing",
+      "Apply and interpret simple statistical methods within one- and two sample situations and for count data",
+      "Apply and interpret simple statistical methods within simple and multiple linear regression and one- and two-way analysis of variance",
+      "Estimate parameters in the general linear model using matrix algebra",
+      "Use Python and interpret its output",
+      "Interpret power considerations and perform sample size calculations in different settings using Python",
+      "Debate and criticize empirical based information",
+      "Recognize core statistical terms"
+    ]
+  },
+  "02403": {
+    "title": "02403 Introduction to Mathematical Statistics",
+    "learning-objectives": [
+      "Estimate and interpret simple summary statistics, such as mean, standard deviation, variance, median and quartiles as well as correlation",
+      "Apply simple graphical techniques, including histograms, qq-normal plots, and box plots",
+      "Identify and describe probability distributions, including Poisson, binomial, exponential and the normal distribution using Python",
+      "Compare different statistical methods",
+      "Apply and interpret important statistical concepts, such as the formulation of models, parameter estimation, construction of confidence intervals and hypothesis testing",
+      "Apply and interpret simple statistical methods within simple and multiple linear regression, one- and two-way analysis of variance",
+      "Apply and interpret simple statistical methods within one- and two sample situations and for count data",
+      "Use Python and interpret its output",
+      "Interpret power considerations and perform sample size calculations in different settings using Python",
+      "Debate and criticize empirical based information and recognize core statistical terms",
+      "Apply the matrix formulation of the general linear model and infer test statistics based on projections",
+      "Account for the derivation of simple statistcal tests based on the normal hypothesis"
+    ]
+  },
+  "02405": {
+    "title": "02405 Probability theory",
+    "learning-objectives": [
+      "Apply simple approximate formulas for calculation of probabilities",
+      "Apply operations with random variables to obtain new probability distributions.",
+      "Formulate simple probability models from a verbal description.",
+      "Apply basic definitions and axioms in problem solving (simple problems).",
+      "Apply the concept of conditional probability in the basic formulas and definitions of it.",
+      "Apply the concepts of conditional distribution and conditional moments.",
+      "Choose the correct probabilistic model for a real world phenomenon based on the characteristics.",
+      "Perform simple calculations with moments, cross-moments and correlations.",
+      "Apply and utilize the relationship between the different ways of expressing a probability distribution.",
+      "Calculate distributions and quantities derived from the bivariate normal distribution.",
+      "Correctly apply characteristics of discrete and continuous distributions respectively"
+    ]
+  },
+  "02407": {
+    "title": "02407 Stochastic Processes - Probability 2",
+    "learning-objectives": [
+      "Differentiate between different types of stochastic processes, and determine which model class that is most relevant for a certain dynamic phenomenon",
+      "Simulate realizations of a Markov- or renewal process",
+      "Classify states of a Markov process and the process itself",
+      "Determine invariant distributions in Markov processes",
+      "Determine simple time varying transition probabilities in Markov processes",
+      "Formulate and solve equations for time to absorption or expected time to absorption in Markov chains.",
+      "Formulate discrete time Markov processes, which arise from different sampling techniques in continuous time processes",
+      "Identify and analyze important special cases of Markov processes, e.g. birth and death processes and fundamental queueing systems",
+      "Perform calculations in models based on Brownian motion",
+      "Working knowledge of different probability generatingfunctions",
+      "If time allows get some knowledge on martingales"
+    ]
+  },
+  "02409": {
+    "title": "02409 Multivariate Statistics",
+    "learning-objectives": [
+      "Explain structure of multivariate data, and calculate the structure of linear combinations of such data",
+      "Apply the multivariate normal distribution to describe multivariate data, and assess it's relevance in a given case",
+      "Identify relevant distributions derived from the normal distribution, and apply those in conclusions of performed analyses",
+      "Interpret multivariate data based on eigenvalue analyses of correlation- and variance-covariance-structures",
+      "Construct relevant models with both univariate and multivariate respons variables, and evaluate the model quality in a given case",
+      "Suggest an analysis for a given set of data, and find the parameters and other relevant quantities",
+      "Able to use the statistical software packages SAS or R, including identifying relevant quantities in and interpreting output from this package.",
+      "Relate formulas and concepts from the course with the relevant quantities in SAS or R"
+    ]
+  },
+  "02411": {
+    "title": "02411 Statistical Design and Analysis of Experiments",
+    "learning-objectives": [
+      "formulate an adequate experimental design for an experiment in the laboratory or under similar more or less controlled conditions.",
+      "assess advantages and disadvantages of alternative experimental designs, for example with respect to randomization and/or blocking.",
+      "formulate a correct mathematical model for data obtained froma given experimental design.",
+      "test and estimate the effects in models for experiments with both deterministic and random effects.",
+      "do detailed analyses of factorial effects by means of adequate contrasts and/or methods for grouping of mean responses.",
+      "to construct experimental designs for factorial experiments with many factors each at (most often) two levels by means of block confounding and reduction through effect confounding.",
+      "use special methods for statistical analysis of data from block confounded and/or reduced many-factor designs.",
+      "use and carry out the statistical analysis of data from experiments with measurable sources of experimental noise (covariates).",
+      "determine the necessary number of measurements in simple designs."
+    ]
+  },
+  "02413": {
+    "title": "02413 Statistical Quality Control",
+    "learning-objectives": [
+      "Formulate an (the) adequate statistical control problem for a production or similar process.",
+      "Use alternative statistical methods for solving the process control problem.",
+      "Assess general advantages and disadvantages for alternative process control methods.",
+      "Assess and compare alternative process control methods concretely (numerically).",
+      "Use standardised methods (ISO) for statistical quality control of lots by sampling.",
+      "Use sampling methods relating to attribute sampling as well as to sampling by variables.",
+      "Assess advantages and disadvantages relating to the sampling strategy (single, double, sequential).",
+      "Estimate and test quality measures in general by means off modern and relevant statistical tools."
+    ]
+  },
+  "02417": {
+    "title": "02417 Time Series Analysis",
+    "learning-objectives": [
+      "Apply methods for building stochastic dynamic models",
+      "Understand the relation between dynamic systems and stochastic processes",
+      "Knowlegde about linear stochastics process models (ARMA; ARX; Box-Jenkins; GLM; OE; ARIMA; Seasonal models; etc.)",
+      "Apply and calculate correlation functions",
+      "Apply time domain and frequency domain descriptions",
+      "Predictions in time series",
+      "Formulate state space descriptions",
+      "Understand and implement the Kalman filter",
+      "Apply regression based methods for time series",
+      "Optimize prediction functions and model based control",
+      "Document and present results in a written report",
+      "Give constructive feedback to others reports"
+    ]
+  },
+  "02419": {
+    "title": "02419 Statistical modelling: Theory and practice",
+    "learning-objectives": [
+      "Formulate and apply common statistical models",
+      "Perform model check and be able to evaluate the adequacy of statistical methods in specific applications",
+      "Be able to interpret and present results from statistical analysis",
+      "Apply estimation methods, in particular the principle of Maximum Likelihood",
+      "Perform likelihood ratio tests, Wald test and use the profile likelihood function to assess parameter unceartainty",
+      "Use simulation based methods for unceartainty estimation",
+      "Be able to perform standard statistical analysis using the statistical software R",
+      "Recognize the possible use and potential of more advanced statistical methods",
+      "Describe and apply generalized linear models",
+      "Use non-parametric (Kaplan-Meier) and parametric methods to describe and compare survial data",
+      "Model time-series data using hidden Markov models"
+    ]
+  },
+  "02421": {
+    "title": "02421 Stochastic Adaptive Control",
+    "learning-objectives": [
+      "Describe a physical process using an internal (state space) or external (ARMAX) model.",
+      "Linearize and discretize nonlinear continuous-time models.",
+      "Analyze internal and external models (e.g., using Lyapunov equations).",
+      "Monitor the state of a system (e.g., using a Kalman filter).",
+      "Control a process (e.g., using a linear quadratic regulator (LQR)).",
+      "Identify a system (i.e., the parameter values in a model of the system).",
+      "Monitor unknown time-varying disturbances or parameters (online system identification).",
+      "Mitigate the effects of unknown variations in disturbances and parameter values using adaptive control.",
+      "Describe the key aspects of the methods presented during the course, their main purpose, and the underlying assumptions.",
+      "Account for the underlying mathematics of the methods, e.g., key steps in the derivation. (For instance, the projection theorem is a key step in the derivation of the Kalman filter.)",
+      "Modify existing methods and derive new methods for systems not presented in class. (For instance, apply the Kalman filter and LQR to a system with correlated process and measurement noise.)"
+    ]
+  },
+  "02425": {
+    "title": "02425 Diffusions and stochastic differential equations",
+    "learning-objectives": [
+      "Define and describe diffusion and Brownian motion",
+      "Compute stochastic integrals, most importantly the Ito integral, and apply the rules of stochastic calculus",
+      "Build stochastic dynamic models by combining ordinary differential equations with models of how noise affects the system",
+      "Explain how a given stochastic differential equation corresponds to a certain advective-diffusive transport equation",
+      "Investigate the properties of a stochastic differential equation in terms of sample paths and transition probabilities, both analytically and numerically.",
+      "Implement a state estimation filter for analyzing time series data based on a stochastic differential equation",
+      "Identify the optimal strategy to control a system in presence of noise",
+      "Evaluate the importance of including noise in a study of a given system."
+    ]
+  },
+  "02426": {
+    "title": "02426 Non-linear random effect models: time-independent and dynamic models",
+    "learning-objectives": [
+      "Understand the Marginal likelihood for random effect models",
+      "Indentify reasonable correlation structure in linear mixed effect models, based on relevant assumptions",
+      "Apply and understand the Laplace approximation",
+      "Formulate models in the framework of Generalized Linear Mixed effect models (GLMM)",
+      "Formulate and apply random effect models using conjugate priors",
+      "Formulate and implement General mixed effect models, i.e. non-linear/non-Gaussian first and second stage models",
+      "Formulate and estimate parameters in generalized state space models.",
+      "Apply automatic diffferention for parameter and state estimation in Hierarchical models",
+      "Formulate and estimate parameters in non-homogeneous Hidden Markov Models, and interpret local and global decoding",
+      "Estimate state variables and parameters in SDE models using the Laplace approximation",
+      "Compare and discuss different statistical models and methods"
+    ]
+  },
+  "02427": {
+    "title": "02427 Advanced Time Series Analysis",
+    "learning-objectives": [
+      "Apply methods for building stochastic dynamic models",
+      "Identify the need for a non-linear model",
+      "Identify the need for a non-stationary model",
+      "Knowledge about a number of non-linear and non-stationary model classes",
+      "Establish models in discrete and continuous time",
+      "Differentiate between methods for formulating stochastic models",
+      "Apply stochastics models for prediction",
+      "Knowledge about using stochastic differential equations for modelling",
+      "Apply non-parametric and semi-parametric methods",
+      "Calculate predictions of time series",
+      "Estimate parameters in stochastic dynamic models",
+      "Document and present results in a written report."
+    ]
+  },
+  "02428": {
+    "title": "02428 Dynamic Optimization",
+    "learning-objectives": [
+      "To apply the Euler-Lagrange equation to identify stationary points for integral functionals",
+      "To apply the Maximum Principle of Pontryagin to identify optimal controls.",
+      "To pose and solve the Dynamic Programming equation for optimal control of differential equations.",
+      "To compute linearized feedback strategies which apply near optimal equilibria and trajectories.",
+      "To pose and solve the Dynamic Programming equation for Markov Decision Problems and optimization problems on graphs",
+      "To give examples of analysis of dynamic games",
+      "To analyse dynamic optimization problems both theoretically and numerically",
+      "To give examples of dynamic optimization problems in physics, decision, and control"
+    ]
+  },
+  "02429": {
+    "title": "02429 Analysis of correlated data: Mixed linear models",
+    "learning-objectives": [
+      "Construct and apply factor structure diagrams for complex experimental designs.",
+      "Perform statistical analyses based on the theory of mixed linear models using the statistical software R.",
+      "Explain the theory of mixed linear models.",
+      "Distinguish between random and fixed effects.",
+      "Compare and distinguish between different relevant models and statistical methods.",
+      "Perform, explain, and discuss statistical analyses of data from unbalanced block and split-plot experiments.",
+      "Perform, explain, and discuss statistical analyses of data from unbalanced longitudinal studies.",
+      "Perform, explain, and discuss hierarchical statistical analyses including analyses based on variance component models and regression models with varying coefficients.",
+      "Perform, explain, and discuss statistical analyses for repeated measurements including identification of various correlation structures.",
+      "Combine and modify the various techniques."
+    ]
+  },
+  "02431": {
+    "title": "02431 Risk Management",
+    "learning-objectives": [
+      "Understand and apply basic risk terminology",
+      "Explain the difference between risk management and safety management",
+      "Relate in a qualified manner to key propositions on how risk is generated, including, normal accident theory, the concept of a safety factor, intensification and executive failure",
+      "Explain basic models for accident aetiology, including the Heinrich triangle and Reason's Swiss Cheese concept, drift of safety factor, and Rasmussen's SRK hierarchy",
+      "Carry out basic incident investigation and apply key concepts such as triggers, latent and active failures and organizational processes",
+      "Apply a basic risk identification technique (SWIFT) and undertake a simple risk analysis and risk assessment",
+      "Outline the basic components and principles of a ISO 31000 risk management programme and the textbook's barrier management approach to managing risk",
+      "Identify key characteristics of accident precursor analysis, explain the near-miss concept, discuss common pitfalls, and relate to the learning-from-past-mistakes approach to risk management",
+      "Discuss different strategies for risk management, pro et contra",
+      "Explain the cases that are part of curriculum and explain how they relate to risk concepts and topics presented in course.",
+      "Identify key requirements to a good written assignment, separate theory and empirical findings, have a very basic understanding of epistemology",
+      "Relate in a qualified manner to existing and future debates of risk"
+    ]
+  },
+  "02435": {
+    "title": "02435 Decision-Making Under Uncertainty",
+    "learning-objectives": [
+      "Explain techniques for decision-making under uncertainty (stochastic programming, approximate dynamic programming, robust optimization)",
+      "Formulate and solve problems where decisions need to be made sequentially in time.",
+      "Formulate decision-making problems in different applications (energy systems, electricity markets, finance, logistics) as mathematical programs.",
+      "Assess and judge the best technique of optimization under uncertainty to be applied to a specific decision-making problem given input information, modeling of uncertainty, risk criterion, sequence of decisions and computational tractability",
+      "Apply scenario generation techniques to handle uncertain data as input to the decision-making process.",
+      "Apply a technique of optimization under uncertainty to a new planning problem",
+      "Solve optimization problems including uncertainty using appropriate programming languages and software",
+      "Use AI (large language models) productively to support understanding of the course's concepts.",
+      "Analyze and interpret the solution to an optimization problem in relation to the planning problem and with regards to quality.",
+      "Debate the different techniques of optimization under uncertainty in terms of uncertainty modeling, objective function, degree of conservatism and problem structure",
+      "Document, structure and present results in a written report.",
+      "Keep track of one's own learning process."
+    ]
+  },
+  "02441": {
+    "title": "02441 Applied Statistics and Statistical Software",
+    "learning-objectives": [
+      "Formulate and apply some commonly used statistical models",
+      "Able to interpret the results from some simple statistical models",
+      "Perform model validation",
+      "Perform estimation, hypothesis testing, and prediction by means of some simple statistical models",
+      "Perform simple statistical analysis by means of statistical software",
+      "Interpret the output from statistical software",
+      "Adequately interpret the results of statistical analysis",
+      "Perform data wrangling, i.e. prepare raw data for statistical analysis",
+      "Write a report describing the results of statistical analysis to people without background in statistics"
+    ]
+  },
+  "02443": {
+    "title": "02443 Stochastic Simulation",
+    "learning-objectives": [
+      "Apply build-in random number generators in various software products",
+      "Implent algorithms for random number generation from various distributions",
+      "Perform simple statistical analysis of simulated data",
+      "Apply simulation based statistical techniques like bootstrap and Markov Chain Monte Carlo",
+      "Apply simulated annealing as a heuristic method for minor optimization problems with discrete variables",
+      "Develop and implement simulation procedures for simple technical systems using the event by event principle",
+      "Perform verification of a programme for simulation",
+      "Perform validation of a simulation model",
+      "Plan and execute a simulation study for a specific part or function of some (technical) system",
+      "Apply techniques for variance reduction in a simulation study",
+      "Present the results of a simulation study writtenly or verbally"
+    ]
+  },
+  "02445": {
+    "title": "02445 Project in Statistical Evaluation for Artificial Intelligence and Data",
+    "learning-objectives": [
+      "Identify and discuss suitable statistical methods for the evaluation of AI systems and practical problems involving data.",
+      "Understand the matrix formulation of simple statistical models",
+      "Understand, discuss and test for interaction effects in statistical models.",
+      "Understand and discuss the assumptions behind relevant statistical methods.",
+      "Understand and apply parametric and non-parametric tests.",
+      "Perform estimation, hypothesis testing, and prediction by means of some simple statistical models using suitable software.",
+      "Setup and evaluate A/B tests.",
+      "Evaluate estimates for model generalization.",
+      "Apply resampling methods for evaluation of statistical estimators.",
+      "Apply and discuss measures of bias and fairness in AI",
+      "Interpret the output from statistical analysis software.",
+      "Disseminate the statistical results in a report targeted people without background in statistics."
+    ]
+  },
+  "02451": {
+    "title": "02451 Introduction to Machine Learning",
+    "learning-objectives": [
+      "Explain the major steps involved in data modeling from preparing the data, modeling the data to evaluating and disseminating the results.",
+      "Discuss key machine learning concepts such as feature extraction, cross-validation, generalization and over-fitting, prediction, curse of dimensionality, and the bias-variance trade-off.",
+      "Match practical problems to standard data modeling problems such as dimensionality reduction, regression, classification, density estimation and clustering.",
+      "Explain how a relevant set of machine learning methods works.",
+      "Describe assumptions, strengths, and limitations of relevant machine learning methods.",
+      "Apply, modify, and implement central aspects of machine learning algorithms in Python",
+      "Apply visualization techniques and statistics to evaluate model performance, identify patterns and data issues.",
+      "Select, combine and modify data modeling tools in order to analyze data and disseminate the results of the analysis."
+    ]
+  },
+  "02452": {
+    "title": "02452 Machine Learning",
+    "learning-objectives": [
+      "Explain the major steps involved in data modeling from preparing the data, modeling the data to evaluating and disseminating the results.",
+      "Discuss key machine learning concepts such as feature extraction, cross-validation, generalization and over-fitting, prediction, curse of dimensionality, and the bias-variance trade-off.",
+      "Match practical problems to standard data modeling problems such as dimensionality reduction, regression, classification, density estimation and clustering.",
+      "Sketch how a relevant set of machine learning methods work and describe their assumptions, strengths, and limitations.",
+      "Apply and modify machine learning algorithms in Python.",
+      "Apply visualization techniques and statistics to evaluate model performance, identify patterns and data issues.",
+      "Select, combine and modify data modeling tools in order to analyze data and disseminate the results of the analysis.",
+      "Apply the data modeling framework to a broad range of application domains in medical engineering, bio-informatics, chemistry, electrical engineering and computer science."
+    ]
+  },
+  "02455": {
+    "title": "02455 Experiment in Cognitive Science",
+    "learning-objectives": [
+      "Describe ethical considerations when conducting experiments with human participants",
+      "Describe different behavioural (i.e. reaction time, eye-tracking) and physiological (i.e. heart rate, HRV) measures in cognitive science, and how they can inform human cognition",
+      "Use AI to zoom into a research field of interest, within the field of cognitive science",
+      "Find, assess, and review relevant literature in a chosen field of cognitive science",
+      "Formulate a research question and testable hypothesis in cognitive science research",
+      "Design an experiment in cognitive science to test a given hypothesis",
+      "Perform an experiment to test the hypothesis by collecting behavioural or physiological data from human participants",
+      "Analyze the experiment by pre-processing the data and applying appropriate statistical analyses",
+      "Report the results of the experiment, and interpret them in the context of a wider research area"
+    ]
+  },
+  "02456": {
+    "title": "02456 Deep learning",
+    "learning-objectives": [
+      "Demonstrate knowledge of machine learning terminology such as likelihood function, maximum likelihood, Bayesian inference, feed-forward, convolutional, sequential and Transformer neural networks, and error back propagation.",
+      "Understand and explain the choices and limitations of a model for a given setting.",
+      "Apply and analyze results from deep learning models in exercises and own project work*.",
+      "Plan, delimit and carry out an applied or methods-oriented project in collaboration with fellow students and project supervisor*.",
+      "Assess and summarize the project results in relation to aims, methods and available data*.",
+      "Carry out the project and interpret results by use of computational framework for GPU programming such as PyTorch*.",
+      "Structure and write a final short technical report including problem formulation, description of methods, experiments, evaluation and conclusion*.",
+      "Organize and present project results at the final project presentation and in report*.",
+      "Read, evaluate and give feedback to work of other students.",
+      "* If generative AI is used in these phases, then it needs to be documented and critically assessed. A checklist will be provided and should be handed in as part of the report."
+    ]
+  },
+  "02458": {
+    "title": "02458 Cognitive Modelling",
+    "learning-objectives": [
+      "Analyse data from psychophysical data using signal detection theory and the psychometric function",
+      "Analyse perception from a Bayesian perspective",
+      "Analyse linear models of neural coding",
+      "Describe the relationship between neural and cognitive models",
+      "Fit a custom probabilistic model of a cognitive process to behavioural data",
+      "Evaluate custom probabilistic model using cross-validation",
+      "Simulate data from a probabilistic model",
+      "Use simulated data to evaluate model and parameter recovery",
+      "Discuss the relation between qualitative and quantitative models of cognitive processes"
+    ]
+  },
+  "02460": {
+    "title": "02460 Advanced Machine Learning",
+    "learning-objectives": [
+      "Explain in detail how deep generative models work.",
+      "Operationalise and implement deep generative models.",
+      "Compare and distinguish the modeling choices in different deep generative models.",
+      "Reason about which aspects of a statistical model yields identifiable outcomes.",
+      "Operationalize differential geometric representations in latent variable models.",
+      "Estimate identifiable distributions from observational data expressed in a learned representation.",
+      "Operationalize and implement graph neural networks.",
+      "Reason about the foundations of graph neural networks."
+    ]
+  },
+  "02461": {
+    "title": "02461 Introduction to Intelligent Systems",
+    "learning-objectives": [
+      "Describe key components of intelligent systems: Sensing and active data collection, machine learning, statistical evaluation and communication",
+      "Discuss the role of AI tools in application domains such as bio-medicine, business and commerce, information retrieval and social media",
+      "Discuss safety and ethical challenges in AI. Biases and stereotypes, privacy and societal impact.",
+      "Apply AI tools to data such as image, audio, text and games. Discuss performance obtained in individual and classroom experiments",
+      "Use techniques for evaluation of performance and basic debugging of AI.",
+      "Apply scientific Python programming tools including Jupyter notebooks, Numpy, and Pytorch",
+      "Apply tools for managing of files and programs in the terminal",
+      "Apply tools for managing programming projects including version control"
+    ]
+  },
+  "02462": {
+    "title": "02462 Signals and data",
+    "learning-objectives": [
+      "Discuss the principles of image analysis image, including grayscale and RGB image representation, and apply key distance measures for image comparison.",
+      "Understand the principles of image filtering, including convolution and the impact of padding, and explore the basics of CNNs with a focus on preventing overfitting and underfitting.",
+      "Discuss signal processing concepts such as distinguishing between analog and digital signals.",
+      "Understanding signal processing techniques including Fourier Transforms and filtering, with applications to real-world data like audio, EEG, and heart signals.",
+      "Identify a foundational understanding of natural language processing by learning about Bag-of-Words and Latent Semantic Analysis as well as how to implement advanced GloVe embeddings and FastText.",
+      "Discuss advanced AI topics including transfer learning, attention mechanisms, and the capabilities of prominent Transformer models like BERT and GPT, for sophisticated signal and data analysis.",
+      "Evaluate the effectiveness of the previous models in real-world applications, critically assessing their performance and identifying potential improvements.",
+      "Apply theoretical knowledge to real-life problems using Python and Python notebooks, enhancing learning through practical implementation, with the support of AI coding assistants like GitHub Copilot to improve coding skills and comprehension of provided code samples."
+    ]
+  },
+  "02463": {
+    "title": "02463 Active machine learning and agency.",
+    "learning-objectives": [
+      "Discuss limitations of machine learning based on observational data",
+      "Discuss the concepts of causal discovery and agency",
+      "Discuss the role of agency in Bayesian optimization and active machine learning",
+      "Apply Bayesian optimization to improve machine learning algorithms",
+      "Apply active machine learning methods",
+      "Explain implementations of active learning and causal models in Python.",
+      "Discuss applications of active learning and causal modeling in the physical, medical, and behavioral sciences.",
+      "Design and carry out a mini-project in Bayesian optimization for tuning a machine learning algorithm",
+      "Design and carry out a mini-project in Active learning.",
+      "Present and critically discuss results obtained in the mini-projects and course exercises"
+    ]
+  },
+  "02464": {
+    "title": "02464 Artificial Intelligence and Human Cognition",
+    "learning-objectives": [
+      "Describe differences and similarities between human and artificial intelligence",
+      "Design and conduct small experiments in cognitive science using physiological and/or behavioural measurements",
+      "Analyse neural models of visual perception",
+      "Describe models of how humans and AI systems classify objects into general categories (concepts)",
+      "Apply Bayesian models to understanding human visual perception",
+      "Describe computational models of motor control (e.g., internal models and Bayesian inference), and how they can explain cognitive phenomena",
+      "Describe mechanisms of human social cognition",
+      "Describe concepts in embodied cognition, and how they are relevant to AI",
+      "Apply methods from artificial intelligence to data from experiments in social cognition"
+    ]
+  },
+  "02465": {
+    "title": "02465 Introduction to reinforcement learning and control",
+    "learning-objectives": [
+      "Describe the main aspects of the control problem such as open/closed loop control",
+      "Formulate and apply dynamic programming for exact planning",
+      "Formulate, simulate and control dynamical systems",
+      "Apply linearization of non-linear control problem",
+      "Understand and implement practical control methods such as LQR and PID-control",
+      "Understand key terms in reinforcement learning such as on/off policy methods and the role of value/action-value functions",
+      "Understand Bandit-algorithms and their relationship to the exploration/exploitation dilemma",
+      "Understand the motivation and benefits/drawbacks between major tabular methods such as Q-learning, Sarsa and Monte-Carlo methods, including their relationship to dynamical programming",
+      "Apply linear and non-linear function approximators to reinforcement learning",
+      "Implement methods and perform analysis in the python programming-language"
+    ]
+  },
+  "02466": {
+    "title": "02466 Project work - Bachelor of Artificial Intelligence and Data",
+    "learning-objectives": [
+      "Set up own learning objectives for the project work.",
+      "Limit a subject area, suitable for a project of 10 ECTS, within modelling, design and evaluation of intelligent systems.",
+      "Formulate relevant professional problems and hypotheses, which can limit and guide the project.",
+      "Plan and conduct a realistic project, make work plans and time schedules, and adjust the plan according to new conditions and acquired knowledge.",
+      "Choose and apply reasonable methods for modelling and design of intelligent systems, including ethical dimensions and societal impact.",
+      "Design and carry out experiments to evaluate and improve intelligent systems.",
+      "Evaluate and summarize results.",
+      "Write a structured technical report, including references and citations.",
+      "Provide constructive criticism of own and other\u2019s work.",
+      "Present methods and results concisely both orally and in written form.",
+      "Use AI tools to optimally enhance all parts of the project work from searching literature, to defining project scope, research questions and experiments to assisting in writing processes including the report and code.",
+      "Document the use of the AI tools and reflect upon how the AI tools have been critically evaluated when assisting the project work."
+    ]
+  },
+  "02467": {
+    "title": "02467 Computational Social Science",
+    "learning-objectives": [
+      "Understand the history, methodologies, and core principles of computational techniques in social science research.",
+      "Apply techniques for collecting large-scale data from the web through web scraping and APIs, and interpret the challenges and implications associated with different data sources.",
+      "Use state-of-the-art methods for filtering, cleaning, and preparing complex and large datasets for analysis in Python, ensuring robustness and reliability in the analysis.",
+      "Understand the characteristics of heavy-tailed distributions in social science data, and develop appropriate methodologies for handling such data to ensure accurate interpretation of research findings.",
+      "Use network analysis to model social relations, detect communities, and apply metrics to understand network structures within social science data.",
+      "Apply techniques to analyze textual data, including utilizing NLTK for real-world applications and exploring methods like TF-IDF for understanding textual data characteristics.",
+      "Employ random null models to critically assess the statistical significance of empirical observations in network and textual data analyses, ensuring rigorous evaluation of computational social science research findings.",
+      "Develop and employ compelling visualizations for both single and multiple variable data sets, enhancing the exploration and presentation of social science data.",
+      "Identify and address concerns related to data privacy, bias, and the responsible use of computational methods in social science research."
+    ]
+  },
+  "02471": {
+    "title": "02471 Machine learning for signal processing",
+    "learning-objectives": [
+      "Explain, apply and analyze properties of discrete time signal processing systems",
+      "Apply the short time Fourier transform to compute the spectrogram of a signal and analyze the signal content",
+      "Explain compressed sensing and determine the relevant parameters in specific applications",
+      "Deduce and determine how to apply factor models such as non-negative matrix factorization (NMF), independent component analysis (ICA) and sparse coding",
+      "Deduce and apply correlation functions for various signal classes, in particular for stochastic signals",
+      "Analyze filtering problems and demonstrate the application of least squares filter components such as the Wiener filter",
+      "Describe, apply and derive non-linear signal processing methods based such as kernel methods and reproducing kernel Hilbert space for applications such as denoising",
+      "Derive maximum likelihood estimates and apply the EM algorithm to learn model parameters",
+      "Describe, apply and derive state-space models such as Kalman filters and Hidden Markov models",
+      "Solve and interpret the result of signal processing systems by use of a programming language",
+      "Design simple signal processing systems based on an analysis of involved signal characteristics, the objective of the processing system, and utility of methods presented in the course",
+      "Describe a number of signal processing applications and interpret the results"
+    ]
+  },
+  "02476": {
+    "title": "02476 Machine Learning Operations",
+    "learning-objectives": [
+      "Organize code in an efficient way for easy maintainability and shareability",
+      "Capable of using version control systems to efficiently collaborate on code development and handle large amounts of data",
+      "Being able to create reproduceable software environments and reproduceable containerized applications and experiments",
+      "Being able to debug, profile, visualize and monitor multiple experiments to assess model performance",
+      "Implement basic testing of software and apply continuous integration (CI) for automating code development",
+      "Capable of using cloud based computing services to scale experiments and automate processes",
+      "Able to deploy machine learning models, both locally and in the cloud and monitor the lifecycle of the model after deployment",
+      "Demonstrate how to scale data loading, training and inference of the machine learning pipeline using distributed frameworks and optimization strategies.",
+      "Conduct a research project in collaboration with follow students using the frameworks taught in the course"
+    ]
+  },
+  "02477": {
+    "title": "02477 Bayesian machine learning",
+    "learning-objectives": [
+      "Discuss fundamental concepts in Bayesian machine learning: prior distributions, likelihood functions, posterior distributions and model evidence",
+      "Explain and discuss common distributions and assumptions for probabilistic models",
+      "Discuss and relate maximum likelihood inference, maximum a posteriori, exact Bayesian inference, and approximate Bayesian inference",
+      "Perform and analyse approximate inference by sampling and variational methods.",
+      "Implement and analyse methods for model selection and evaluation",
+      "Discuss uncertainty quantification and calibration in Bayesian models",
+      "Explain and apply Bayesian decision theory",
+      "Discuss and apply approximate Bayesian inference for deep learning models",
+      "Design Bayesian machine systems for supervised and unsupervised learning",
+      "Design and implement numerical experiments to evaluate machine learning systems."
+    ]
+  },
+  "02492": {
+    "title": "02492 Digital Learning Technology and Entrepreneurship",
+    "learning-objectives": [
+      "Describe the use of digital learning technologies as a way to support teaching and learning",
+      "Explain theories of how to develop efficient and engaging digital learning and teaching technologies.",
+      "Apply theories and methods from a range of the cross disciplinary field of digital learning technology design in the development of their learning technology. For example: learning theories, learning design theories, learning analytics, data mining, interaction design, game design, user experience and entrepreneurial thinking",
+      "Design a digital learning technology as a concept and/or a digital prototype",
+      "Create a design using relevant qualitative and quantitative methods and carry out one or more small-scale co-design processes with users (for example learners, instructors or management) when developing the learning technology",
+      "Create a design using relevant qualitative and quantitative research methods and - if possible - carry out a test of the learning technology with users (for example learners, instructors or management), in order to create evidence for the developed technology",
+      "Communicate ideas and technical aspects in a clear and concise form",
+      "Pitch the digital learning technology as a simple business model"
+    ]
+  },
+  "02501": {
+    "title": "02501 Advanced Deep Learning in Computer Vision",
+    "learning-objectives": [
+      "Select, implement, and utilize state-of-the-art deep learning architectures for classical computer vision tasks such as classification, segmentation, and recognition",
+      "Utilize and examine deep learning models that combine image data with other modalities, such as text",
+      "Implement deep learning models for temporal image data, such as videos",
+      "Explain and implement deep generative models for image synthesis",
+      "Describe, implement and compare alternative methods for training deep learning models in limited data settings",
+      "Assess the quality of deep learning models for computer vision from viewpoints of both performance and responsibility/ethics.",
+      "Present projects and associated results in writing as well as oral presentation.",
+      "Discuss strengths, weaknesses and societal implications of state-of-the-art deep learning models."
+    ]
+  },
+  "02503": {
+    "title": "02503 Image analysis",
+    "learning-objectives": [
+      "Explain the fundamental properties of digital images including medical images .",
+      "Describe principles for image acquisition including the pin hole camera and medical modalities like x-ray, computed tomography and magnetic resonance imaging.",
+      "Implement and use basic image coding for storing images.",
+      "Implement and apply image analysis algorithms, including point processing, filtering, morphology, BLOB analysis, pixel classification, geometrical transforms, registration, classification, boundary tracing, line detection and segmentation.",
+      "Implement and use statistical methods like principal component analysis for processing images and extraction of significant information from images. Implement and test generative image models based on principal component analysis. Describe and use shape and appearance models based on principal component analysis.",
+      "Implement and apply change detection algorithms for video processing..",
+      "Apply and evaluate feature-based classification using linear discriminant analysis.",
+      "Use and evaluate state-of-the-art methods for 3D medical image registration.",
+      "Design an appropriate image analysis algorithm based on a set of example images and a given objective.",
+      "Compute the performance of a given image analysis algorithm given a ground-truth data set.",
+      "Improve and optimize image algorithms based on ground truth data or clinical end-points.",
+      "Select appropriate training data and do feature selection for image based and pixelwise classification algorithms."
+    ]
+  },
+  "02504": {
+    "title": "02504 Computer Vision",
+    "learning-objectives": [
+      "Identify relevant methods for solving computer vision problems.",
+      "Implement a chosen computer vision algorithm in e.g. Matlab or Python.",
+      "Carry out a systematic performance analysis of a computer vision algorithm.",
+      "Apply one and two view geometry for estimating points, positions, and surfaces.",
+      "Implement and use linear methods for camera estimation.",
+      "Implement and use camera calibration.",
+      "Implement and apply the RANSAC algorithm.",
+      "Find correspondences between 2D image points and estimate 3D points from these.",
+      "Understand and use image features in computer vision.",
+      "Use common computer vision software libraries."
+    ]
+  },
+  "02506": {
+    "title": "02506 Advanced Image Analysis",
+    "learning-objectives": [
+      "Implement advanced image analysis algorithms in Python.",
+      "Assess if an implemented image analysis algorithm works correctly and gives the desired results.",
+      "Motivate and identify the underlying assumptions of an image analysis method.",
+      "Apply machine learning methods/neural networks to image analysis problems.",
+      "Apply scale space methods, and know when this is appropriate.",
+      "Apply feature based methods to solve image analysis problems",
+      "Apply deformable template models, and estimate these from data.",
+      "Apply Markov Random Field techniques to image analysis problems."
+    ]
+  },
+  "02510": {
+    "title": "02510 Deep learning and data engineering for image analysis",
+    "learning-objectives": [
+      "select and deploy appropriate deep learning-based methods for image segmentation, classification, and detection problems,",
+      "select and deploy appropriate tools for inspecting and interpreting the deep learning progress and results,",
+      "organize data for deep learning to consider training, validation, testing, and balancing data,",
+      "select and use tools for efficient data labeling,",
+      "plan image analysis pipeline including problem description, initial investigation, and deploying deep learning methods,",
+      "compute structural measures from extracted image features,",
+      "quantify measured structures and present relevant statistics,",
+      "use high performance computing infrastructure for training deep learning models",
+      "compare different embedding methods to identify patterns, anomalies, and relationships within a dataset"
+    ]
+  },
+  "02515": {
+    "title": "02515 Image analysis",
+    "learning-objectives": [
+      "Explain the fundamental properties of digital images including medical images .",
+      "Describe principles for image acquisition including the pin hole camera and medical modalities like x-ray, computed tomography and magnetic resonance imaging.",
+      "Perform feature-based image classification using support vector machines, random forests and k-nearest neighbor approaches.",
+      "Implement and apply image analysis algorithms, including point processing, filtering, morphology, BLOB analysis, pixel classification, geometrical transforms, registration, classification, boundary tracing, line detection and segmentation.",
+      "Implement and use statistical methods like principal component analysis for processing images and extraction of significant information from images. Implement and test generative image models based on principal component analysis. Describe and use shape and appearance models based on principal component analysis.",
+      "Implement and apply change detection algorithms for video processing..",
+      "Apply and evaluate feature-based classification using linear discriminant analysis.",
+      "Use and evaluate state-of-the-art methods for 3D medical image registration.",
+      "Design an appropriate image analysis algorithm based on a set of example images and a given objective.",
+      "Compute the performance of a given image analysis algorithm given a ground-truth data set.",
+      "Improve and optimize image algorithms based on ground truth data or clinical end-points.",
+      "Select appropriate training data and do feature selection for image based and pixelwise classification algorithms."
+    ]
+  },
+  "02516": {
+    "title": "02516 Introduction to Deep Learning in Computer Vision",
+    "learning-objectives": [
+      "Define what is deep learning and explain the difference between deep learning models and traditional machine learning based on hand-crafted features in computer vision.",
+      "Select and implement suitable convolutional neural network architectures for classification, localization and segmentation.",
+      "Interpret and illustrate the internal representations of a convolutional neural network",
+      "Demonstrate knowledge of and use of popular techniques used for training neural networks.",
+      "Find appropriate training data for a given problem as well as apply relevant data augmentation.",
+      "Setting up convolutional neural networks to be trained with a custom dataloader on a remote server",
+      "Assess and analyze the performance of convolutional neural networks.",
+      "Define and implement adversarial attacks to highlight instabilities in neural networks",
+      "Define, implement and discuss attribution methods from explainable AI"
+    ]
+  },
+  "02517": {
+    "title": "02517 Responsible AI: Algorithmic fairness and explainability",
+    "learning-objectives": [
+      "explain what AI means to discuss and identify the common assumptions we make, and the ones we should avoid when building AI responsibly,",
+      "investigate, identify, and discuss issues with AI systems responsibly within and outside the community,",
+      "give an overview of challenges and state-of-the-art in fairness and bias when building and deploying AI,",
+      "diagnose bias in predictive and generative AI,",
+      "be familiar with common sources of bias, and mitigate bias in predictive and generative AI by either adapting the modeling or employing mitigation strategies from algorithmic fairness,",
+      "understand most common types of explainable AI models, and discuss their strengths and weaknesses,",
+      "apply explainable AI models in real scenarios for predictive and generative AI, and interpret their explanations,",
+      "reading research papers with both technical and ethical content, understanding them and presenting their content,",
+      "presenting analysis and results in writing."
+    ]
+  },
+  "02518": {
+    "title": "02518 Computational 3D Imaging and Analysis",
+    "learning-objectives": [
+      "Apply quantitative analysis to volumetric images using descriptive methods.",
+      "Integrate experimental metadata to relate images to the physical world.",
+      "Visualize and interact with 2D/3D images.",
+      "Segment images using background/foreground separation, edge detection, and connected-components analysis.",
+      "Process images with morphological operations, convolution, and filtering (linear, non-linear, scale-space).",
+      "Analyze structures using porosity methods, watershed segmentation, surface detection, and orientation analysis.",
+      "Register and align images through image registration techniques.",
+      "Describe image acquisition principles including tomographic reconstruction and Fourier analysis.",
+      "Develop Python-based pipelines for 3D image processing using the Gbar cluster.",
+      "Optimize computational performance with parallelization on CPUs using the Gbar.",
+      "Plan and execute a mini-project involving imaging, analysis, and quantification."
+    ]
+  },
+  "02525": {
+    "title": "02525 Introduction to Mathematics and Technology",
+    "learning-objectives": [
+      "Describe aspects of the work of a fully qualified engineer.",
+      "Organise collaboration in project groups with the aim of solving a specific engineering task.",
+      "Independently pick up new mathematical methods.",
+      "Perform simple mathematical modelling.",
+      "Use mathematical models to solve specific problems and explain the obtained results in relation to various aspects of the problem.",
+      "Verify the integrity of an algorithm or method through mathematical proof.",
+      "Implement mathematical algorithms on a computer.",
+      "Use graphical tools for visualising mathematical results.",
+      "Write a short technical report with specific structure, including references and citations.",
+      "Provide a short oral or poster presentation of methods and results.",
+      "Account for all work accomplished by the group when doing group work."
+    ]
+  },
+  "02526": {
+    "title": "02526 Mathematical Modeling",
+    "learning-objectives": [
+      "Apply a mathematical model to solve a problem",
+      "Explain the components of a mathematical model",
+      "Judge area of validity of a mathematical model",
+      "Use statistics to summarize the obtained results",
+      "Implement numerical algorithms using Matlab or Python",
+      "Set up test scenarios and collect data",
+      "Explain the model parameter\u2019s influence on the model",
+      "Interpret the calculated results of the model",
+      "Visualize data and results graphically",
+      "Evaluate the relevance of the results for the analyzed problem",
+      "Write a stringent and structured report that precisely describes the model and analysis of the calculated results"
+    ]
+  },
+  "02561": {
+    "title": "02561 Computer Graphics",
+    "learning-objectives": [
+      "Use an application programming interface such as WebGL or WebGPU for developing a graphics application.",
+      "Access graphics hardware using shader languages such as GLSL or WGSL.",
+      "Create a 3D scene with different objects, light sources, and materials.",
+      "Use different camera types and geometries to visualize the scene.",
+      "Interact with the scene using various interaction techniques.",
+      "Model light-material interaction for a surface and develop simple shaders.",
+      "Simulate surface details using texture mapping and bump mapping.",
+      "Simulate the environment using environment mapping.",
+      "Simulate shadows and specular reflections.",
+      "Animate camera, object position, and light settings.",
+      "Render parametric surfaces based on a selected subdivision level."
+    ]
+  },
+  "02562": {
+    "title": "02562 Rendering - Introduction",
+    "learning-objectives": [
+      "Implement ray tracing and associated Monte Carlo sampling techniques.",
+      "Implement shaders for rendering surfaces.",
+      "Explain and apply BRDF solutions for describing light-material interaction.",
+      "Simulate visual effects that appear in a global illumination context (reflection, refraction, colour bleeding, caustics).",
+      "Explain and analyze rendering techniques and choose the best suited method for a given visualization assignment.",
+      "Use simple sampling techniques for anti-aliasing and soft shadows.",
+      "Use texture mapping (mapping an image to a surface) to highten the level of visual detail.",
+      "Accelerate rendering techniques using spatial data structures and graphics cards (GPU).",
+      "Use radiometric concepts to describe how light energy is emitted, reflected, and transmitted from one surface to another.",
+      "Use a rendering tool for physically based rendering of the appearance of a material and explain the path tracing it is based on."
+    ]
+  },
+  "02563": {
+    "title": "02563 Generative Methods for Computer Graphics",
+    "learning-objectives": [
+      "create point sample sets.",
+      "use particles to simulate ensembles of simple entities.",
+      "synthesise images and textures using e.g. learning-based methods.",
+      "generate fractal images and 3D models.",
+      "synthesize 3D objects using grammar-based methods such as L-systems.",
+      "use synthetic noise functions in generative methods.",
+      "create implicitly represented 3D objects using e.g. distance fields.",
+      "manipulate polygonal meshes.",
+      "apply bio-inspired methods such as differential growth for form finding.",
+      "explain and discuss underlying principles of generative methods."
+    ]
+  },
+  "02566": {
+    "title": "02566 Creating Digital Visual Experiences",
+    "learning-objectives": [
+      "capture light and geometry of an environment, e.g. in the form of light fields",
+      "choose appropriate technologies for xR experiences",
+      "capture appearance of real objects",
+      "use acquired content in 3D scenes",
+      "light and shade a virtual environment",
+      "design and implement xR experiences and interaction",
+      "model content using 3D content creation tools",
+      "contrast various types of rendering techniques for volumetric data",
+      "apply image processing methods to extract quantitative information from volumetric data",
+      "generate and process surface models from segmented volumes"
+    ]
+  },
+  "02581": {
+    "title": "02581 Geometric Data Analysis and Processing",
+    "learning-objectives": [
+      "select and use surface representations such as point clouds, triangle meshes and implicit surfaces for tasks involving geometric data",
+      "compute geometric and differential geometric properties of triangle meshes",
+      "use tools from linear algebra for reconstruction and manipulation of surfaces",
+      "polygonize implicit surfaces",
+      "simplify, optimize, and remove noise from 3D triangle meshes",
+      "perform spectral analysis of triangle meshes using the Laplace-Beltrami operator and apply it to smoothing, parametrization and more",
+      "detect and classify features in point clouds and register point clouds",
+      "triangulate 2D point sets using Delaunay triangulation",
+      "reconstruct triangle meshes from 3D point clouds",
+      "compute basic topological features such as genus from polygonal meshes",
+      "represent 3D surfaces as skeletons or medial surfaces"
+    ]
+  },
+  "02582": {
+    "title": "02582 Computational Data Analysis",
+    "learning-objectives": [
+      "Evaluate clustering methods and select suitable parameters and models for given data",
+      "Evaluate linear discriminant analysis and ridge regression",
+      "Evaluate cross validation, bootstrapping and concepts such as overfitting.",
+      "Evaluate sparse regression and classification models.",
+      "Evaluate logistic regression and support vector classifiers for 2 class problems",
+      "Evaluate and interpret Classification and Regression Trees (CART).",
+      "Evaluate bagging, boosting and random forests for classification and regression.",
+      "Evaluate and interpret sparse latent methods such as sparse principal component and sparse partial least squares.",
+      "Evaluate a range of unsupervised decomposition methods",
+      "Compare the mentioned methods theoretically"
+    ]
+  },
+  "02586": {
+    "title": "02586 Statistical Genetics",
+    "learning-objectives": [
+      "Possess the knowledge, skills and tools needed to read current theoretical, methodological and applied literature in Statistical Genetics, to understand methods, and to interpret analyses.",
+      "Understand Mendelian inheritance in a probabilistic framework.",
+      "Understand the practical implementation of basic statistical and probabilistic methods within statistical genetics.",
+      "Be able to work with methods from statistical genetics in practice.",
+      "Identify procedures for estimation of allele frequencies, recombination frequencies, and other genetic parameters underlying observations on Mendelian traits.",
+      "Set up models for linkage equilibrium and disequilibrium, and perform the corresponding analyses.",
+      "Perform association studies for selected disease traits and genetic markers.",
+      "Estimate the degree to which a certain phenotype may be explained based on genotype.",
+      "Model genetic data at population level with mathematical and statistical models.",
+      "Evaluate which statistical model that best explains a given data set relevant for the course contents.",
+      "Be able to lead a discussion among peers on topics of statistical genetics."
+    ]
+  }
+}

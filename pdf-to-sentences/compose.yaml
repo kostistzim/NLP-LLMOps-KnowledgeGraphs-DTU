@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GROBID_URL=http://grobid:8070
+    depends_on:
+      - grobid
+
+  grobid:
+    image: grobid/grobid:0.8.0
+    ports:
+      - "8070:8070"

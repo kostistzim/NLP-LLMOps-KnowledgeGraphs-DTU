@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment (NEVER commit API keys!)
+.env
+
+# Testing
+.pytest_cache/
+.coverage
+
+# OS
+.DS_Store

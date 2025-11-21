@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Temp files
+*.pdf
+!2303.15133.pdf
+
+# OS
+.DS_Store
