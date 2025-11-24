@@ -60,8 +60,13 @@ dependencies:
       - python-multipart==0.0.9  # For FastAPI file uploads
       
       - openai>=1.0.0
+      - networkx==3.4.2
 
 
       - sentence-transformers==3.3.1
       - scikit-learn==1.6.0
+      # LLM Frameworks
+      - langchain==0.3.17
+      - langchain-openai==0.2.14
+      - langchain-community==0.3.16
       - dspy==2.5.44
