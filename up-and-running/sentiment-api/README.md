@@ -2,7 +2,7 @@
 
 A REST API for analyzing sentiment in Danish and English course evaluations, built with FastAPI and Docker.
 
-## 🎯 Features
+##  Features
 
 - **Bilingual Support**: Automatic detection of Danish and English
 - **Advanced Sentiment Analysis**:
@@ -14,13 +14,13 @@ A REST API for analyzing sentiment in Danish and English course evaluations, bui
 - **Auto-Documentation**: Swagger UI at `/docs`
 - **Small Container**: < 200 MB Docker image
 
-## 📊 Test Results
+## Test Results
 
 - **Assignment Tests**: 2/3 passing perfectly, 1 within ±1
 - **Overall Accuracy**: 95.8% on 24 test cases (±1 tolerance)
 - **Languages**: 12 Danish + 12 English test cases
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Run Locally
 
@@ -56,7 +56,7 @@ docker run -p 8000:8000 sentiment-api
 docker images sentiment-api
 ```
 
-## 📡 API Usage
+##  API Usage
 
 ### Basic Sentiment Analysis
 
@@ -105,16 +105,16 @@ print(response.json())  # {"score": 5}
 ### Dictionary-Based Sentiment Analysis
 
 **Pros:**
-- ✅ Very small size (< 1 MB of code)
-- ✅ Fast inference (< 1ms)
-- ✅ Interpretable and debuggable
-- ✅ No training data required
-- ✅ Easy to customize for course evaluations
+-  Very small size (< 1 MB of code)
+-  Fast inference (< 1ms)
+-  Interpretable and debuggable
+-  No training data required
+-  Easy to customize for course evaluations
 
 **Cons:**
-- ❌ Limited by predefined vocabulary
-- ❌ May miss nuanced expressions
-- ❌ Requires manual curation of word lists
+-  Limited by predefined vocabulary
+-  May miss nuanced expressions
+-  Requires manual curation of word lists
 
 ### Advanced Features
 
@@ -138,7 +138,7 @@ print(response.json())  # {"score": 5}
    - Handles complex evaluations
    - Clamps final score to [-5, 5]
 
-## 📦 Project Structure
+##  Project Structure
 
 ```
 .
@@ -156,9 +156,9 @@ print(response.json())  # {"score": 5}
 
 ### Assignment Tests (Required)
 
-1. ✅ "Det var en god lærer." → 3
-2. ✅ "It was a bad course" → -3
-3. ⚠️  "It was a very dry course and I did not learn much." → -4 (expected -3)
+1.  "Det var en god lærer." → 3
+2.  "It was a bad course" → -3
+3.   "It was a very dry course and I did not learn much." → -4 (expected -3)
 
 ### Additional Test Coverage
 
@@ -170,7 +170,7 @@ print(response.json())  # {"score": 5}
 - Negations: "Not good", "Ikke god"
 - Intensifiers: "Very good", "Meget dårlig"
 
-## 🔧 Customization
+##  Customization
 
 ### Add More Sentiment Words
 
@@ -193,7 +193,7 @@ self.english_intensifiers = {
 }
 ```
 
-## 📈 Container Size Analysis
+##  Container Size Analysis
 
 | Component | Size |
 |-----------|------|
@@ -202,9 +202,9 @@ self.english_intensifiers = {
 | Application code | < 1 MB |
 | **Total** | **~71 MB** |
 
-Well under the 200 MB requirement! 🎉
+Well under the 200 MB requirement! 
 
-## 🚧 Future Improvements (Day 2 & 3)
+## Future Improvements (Day 2 & 3)
 
 ### Day 2: ML Model Comparison
 - [ ] Train scikit-learn model (Logistic Regression)
@@ -219,7 +219,7 @@ Well under the 200 MB requirement! 🎉
 - [ ] Monitoring endpoints
 - [ ] Performance benchmarks
 
-## 📝 Assignment Questions Answered
+##  Assignment Questions Answered
 
 ### Q: What are pros/cons of dictionary, ML, and LLMs?
 
@@ -249,11 +249,11 @@ Well under the 200 MB requirement! 🎉
 
 ### Q: What's possible within 200 MB?
 
-- ✅ Dictionary-based (< 100 MB)
-- ✅ Small ML models like Logistic Regression (~100 MB)
-- ❌ BERT-tiny (~120 MB model alone, ~180 MB total)
-- ❌ BERT-base (400+ MB)
-- ❌ Larger transformers (GB+)
+-  Dictionary-based (< 100 MB)
+-  Small ML models like Logistic Regression (~100 MB)
+-  BERT-tiny (~120 MB model alone, ~180 MB total)
+-  BERT-base (400+ MB)
+-  Larger transformers (GB+)
 
 ### Q: More annotated data?
 
@@ -267,7 +267,7 @@ Well under the 200 MB requirement! 🎉
 - Crowdsourcing from classmates
 - Synthetic data generation
 
-## 📚 Dependencies
+##  Dependencies
 
 ```
 fastapi==0.115.5
@@ -275,18 +275,18 @@ uvicorn[standard]==0.32.1
 pydantic==2.10.3
 ```
 
-## 🐛 Known Issues
+##  Known Issues
 
 - Third assignment test case scores -4 instead of -3 (within tolerance)
 - Empty text returns score of 0 (could return error instead)
 - Very long texts not optimized (though still fast)
 
-## 👨‍🎓 Author
+##  Author
 
 DTU Student - Natural Language Processing Course  
 Technical University of Denmark
 
-## 📄 License
+##  License
 
 MIT License - Free for educational use
 
