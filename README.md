@@ -1,6 +1,6 @@
-# NLP, LLMOps & Knowledge Graphs – DTU 02807 Projects
+# NLP, LLMOps & Knowledge Graphs 
 
-This repository collects all assignments and projects from the DTU course **02807 – Computational Tools for Data Science**, focusing on:
+This repository collects all assignments and projects from the DTU course **NLP, LLMOps & Knowledge Graphs**, focusing on:
 
 - Classical NLP and sentiment analysis
 - LLM-based APIs via CampusAI
