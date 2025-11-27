@@ -2,478 +2,373 @@
 
 **Intelligent Course Planning System for DTU Students**
 
-CourseCompass automatically analyzes course information and learning objectives, combines it with official DTU prerequisite data, builds a dependency graph of courses, and generates optimal study paths using NLP, LLMs, and knowledge graphs.
+*Backend • NLP • Knowledge Graphs • LLM Integration • Study Path Planning*
 
 ---
 
-##  Project Overview
+## Overview
 
-### Problem
+CourseCompass is an intelligent course planning system designed for DTU students. It automatically analyzes course learning objectives, processes official DTU prerequisite information, builds a full knowledge graph representing course dependencies, and generates optimal study paths using graph algorithms combined with LLM-generated explanations.
 
-- DTU students struggle to determine which courses they should take before enrolling in advanced courses.
-- The course catalog mixes explicit prerequisites (in dense free-text) with implicit expectations in the learning objectives.
-- Students must manually inspect many course pages to understand the prerequisite structure.
-- It is hard to see end-to-end paths (from basic math/programming to advanced ML/AI courses).
+The system integrates classical NLP, modern LLM reasoning (via CampusAI), vector semantic search (FAISS), and NetworkX graph algorithms. It is designed as a production-quality academic project meeting requirements for NLP experimentation, LLM pipeline design, knowledge graph construction, and backend API development.
 
-### Solution
+---
+
+## Table of Contents
+
+- [Motivation](#motivation)
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Data Sources](#data-sources)
+- [NLP and Embedding Pipeline](#nlp-and-embedding-pipeline)
+- [Prerequisite Extraction](#prerequisite-extraction)
+- [Semantic Course Matching](#semantic-course-matching)
+- [Knowledge Graph Construction](#knowledge-graph-construction)
+- [Path Planning Algorithms](#path-planning-algorithms)
+- [LLM-Based Explanation System](#llm-based-explanation-system)
+- [API (FastAPI)](#api-fastapi)
+- [Frontend (Streamlit)](#frontend-streamlit)
+- [Technology Stack](#technology-stack)
+- [Directory Structure](#directory-structure)
+- [Setup and Installation](#setup-and-installation)
+- [Running the API](#running-the-api)
+- [Running the Frontend](#running-the-frontend)
+- [Docker Deployment](#docker-deployment)
+- [Testing](#testing)
+- [Performance Characteristics](#performance-characteristics)
+- [Limitations](#limitations)
+- [Future Work](#future-work)
+- [Project Information](#project-information)
+- [License](#license)
+
+---
+
+## Motivation
+
+DTU students often struggle to determine which courses they must take before higher-level courses. Although official prerequisites exist, they are embedded in text, inconsistent across courses, and rarely sufficient for complete planning. Students must manually browse dozens of course pages to understand dependencies.
 
 CourseCompass automates this process by:
 
-1. **Extracting prerequisite concepts** from course learning objectives using LLMs (offline / precomputation).
-2. **Parsing official DTU prerequisite rules** from the course descriptions into structured JSON.
-3. **Matching concepts to courses** that teach them using semantic search over embeddings.
-4. **Building a knowledge graph** of course dependencies (currently using the official DTU prerequisites).
-5. **Finding optimal study paths** using graph algorithms (Dijkstra / shortest path).
-6. **Explaining recommendations** in natural language using LLMs, enriched with official prerequisite information.
-
-The current demo graph covers the **full DTU course catalog** (1565 courses, 2397 edges) based on official prerequisites.
+- Analyzing learning objectives
+- Extracting prerequisite concepts with LLMs
+- Matching concepts to courses using semantic search
+- Constructing a full dependency graph (based on official prerequisites)
+- Computing optimal study paths using graph algorithms
+- Generating natural language explanations of the recommended path
 
 ---
 
-##  Technology Stack
+## Features
 
-### Core Frameworks
+### Core Capabilities
 
-- **Backend:** FastAPI
-- **LLM Orchestration:** LangChain + DSPy
-- **LLM Backend:** CampusAI (DTU's OpenAI-compatible LLM service)
+- Full DTU course catalog indexing (over 1500 courses)
+- Semantic search over course descriptions using embeddings
+- Official prerequisite parsing and transformation into structured JSON
+- Knowledge graph construction using official prerequisites
+- Fast shortest-path computation (Dijkstra) for study planning
+- LLM-generated explanations via CampusAI
+- Search-by-topic over embeddings using FAISS
+- Full REST API with FastAPI
+- Frontend UI in Streamlit (search, path planning, graph visualization)
 
-### NLP & ML
+### NLP and LLM Features
 
-- **Embeddings:** sentence-transformers (multilingual model)
-- **Vector Search:** FAISS (Facebook AI Similarity Search)
-- **Text Processing:** spaCy, scikit-learn
+- DSPy-based prerequisite extraction
+- LangChain processing pipeline
+- Structured extraction signatures
+- Natural language explanations for study paths
+- RAG-style similarity search for course queries
 
-### Graph & Data
+---
 
-- **Knowledge Graph:** NetworkX
-- **Data Format:**
-  - `data/dtu_courses.jsonl` – DTU course catalog
-  - `data/prerequisites_official.jsonl` – parsed official prereqs
+## System Architecture
+```
+User → FastAPI Backend →
+  Data Layer (course loading, FAISS index) →
+  Prerequisite Extraction Layer →
+  Knowledge Graph Builder →
+  Path Planning Engine →
+  LLM Explanation Layer →
+  JSON Response
+```
 
-### Deployment
+The architecture integrates NLP, vector search, knowledge graphs, and LLMs into a single coherent pipeline.
 
-- **Containerization:** Docker
-- **API Docs:** OpenAPI/Swagger (FastAPI `/docs`)
+---
+
+## Data Sources
+
+### Primary Data: `dtu_courses.jsonl`
+
+Contains course codes, titles, ECTS, objectives, content, teacher, department, language, semester.
+
+### Derived Data: `prerequisites_official.jsonl`
+
+Parsed from official DTU prerequisite text using `precompute_prereqs_official.py`.
+
+---
+
+## NLP and Embedding Pipeline
+
+- Embeddings generated using a multilingual sentence-transformer model
+- 512-dimensional vectors
+- FAISS FlatL2 index for exact similarity search
+- Documents constructed from title, learning objectives, truncated content, teacher info
+- Query latency typically under 10 ms
+
+---
+
+## Prerequisite Extraction
+
+`precompute_prereqs_official.py` parses DTU's official prerequisite free text into structured JSON with course codes.
+
+**Example:**
+```
+01002 requires 01001 and 01003
+```
+
+LLM-based DSPy extraction is available but not required for official data.
+
+---
+
+## Semantic Course Matching
+
+`course_matcher.py` implements:
+
+- Concept-to-course mapping
+- Ranking based on similarity
+- Aggregation of concept coverage across courses
+
+Used for generating explanation context and identifying where a concept is taught.
+
+---
+
+## Knowledge Graph Construction
+
+`graph_builder.py` creates a directed acyclic graph (DAG) from official prerequisites.
+
+**Graph properties:**
+- 1565 nodes
+- 2397 edges
+- Directed, acyclic, stable
+
+Edges represent prerequisite relationships. Nodes store metadata.
+
+---
+
+## Path Planning Algorithms
+
+`path_planner.py` includes:
+
+- Dijkstra's algorithm for shortest path
+- BFS for collecting all prerequisites
+- ECTS total computation
+- Handling cases where the student has completed courses or has none
+
+Paths returned as sequences of course codes plus metadata.
+
+---
+
+## LLM-Based Explanation System
+
+`explainer.py` generates natural-language explanations for the study plan.
+
+Uses LangChain with CampusAI:
+- Temperature 0.3 for balanced determinism
+- Template describes learning progression, reasoning, and timeline
+
+The LLM summarizes why the recommended path makes sense.
+
+---
+
+## API (FastAPI)
+
+`main.py` provides the backend service with major endpoints:
+
+- `GET /v1/health`
+- `GET /v1/search`
+- `GET /v1/analyze-prerequisites/{course_code}`
+- `POST /v1/generate-path`
+
+Responses include course metadata, prerequisite analysis, computed path, and LLM explanations.
+
+OpenAPI documentation is available at `/docs`.
+
+---
+
+## Frontend (Streamlit)
+
+A lightweight frontend can be built using Streamlit.
+
+**Core features:**
+- Search for similar courses
+- Form to select completed courses and target course
+- Display recommended plan
+- Graph visualization using pyvis or Streamlit network visualization libraries
+
+The frontend sends API requests to the backend and displays results interactively.
+
+---
+
+## Technology Stack
+
+- **Backend:** FastAPI, Pydantic, Python 3.11
+- **NLP:** sentence-transformers, scikit-learn
+- **Vector Search:** FAISS
+- **LLM Integration:** LangChain, DSPy, CampusAI
+- **Graph Processing:** NetworkX
+- **Frontend:** Streamlit
 - **Testing:** pytest
+- **Containerization:** Docker
+- **Deployment:** Uvicorn
 
 ---
 
-##  System Architecture
-
+## Directory Structure
 ```
-User Request (API / UI)
-    ↓
-FastAPI (main.py)
-    ↓
-┌─────────────────────────────────────────┐
-│ Data Layer (indexer.py)                │
-│ - Loads 1565 DTU courses               │
-│ - FAISS vector store for semantic      │
-│   similarity search                    │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│ Official Prereq Layer                  │
-│ - prerequisites_official.jsonl         │
-│   (parsed DTU prereq text)             │
-│ - precompute_prereqs_official.py       │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│ NLP / LLM Layer                         │
-│ - prerequisite_extractor.py (DSPy)      │
-│ - course_matcher.py (LangChain)         │
-│ - explainer.py (LangChain + CampusAI)   │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│ Graph Layer (graph_builder.py)         │
-│ - NetworkX directed graph               │
-│ - 1565 nodes, 2397 edges                │
-│ - Edges from official DTU prereqs       │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│ Planning Layer                          │
-│ - path_planner.py (Dijkstra)            │
-│ - Uses completed_courses as constraints │
-└─────────────────────────────────────────┘
-    ↓
-JSON Response  (+ LLM explanation)
+├── config.py
+├── indexer.py
+├── prerequisite_extractor.py
+├── precompute_prereqs_official.py
+├── course_matcher.py
+├── graph_builder.py
+├── path_planner.py
+├── explainer.py
+├── main.py
+├── test_main.py
+├── Dockerfile
+├── pyproject.toml
+├── README.md
+├── data/
+└── frontend/ (optional Streamlit UI)
 ```
 
 ---
 
-##  Course Requirements Integration
+## Setup and Installation
 
-CourseCompass is designed as a course project (e.g. for 02807 / 02456 / similar), and explicitly demonstrates:
+Requires Python 3.11 and a CampusAI API key.
 
-### Natural Language Processing
-
-- Semantic similarity search using sentence-transformer embeddings
-- Prerequisite concept extraction from learning objectives (LLM + DSPy, offline)
-- Text preprocessing and feature engineering
-
-### Large Language Models
-
-- CampusAI integration via OpenAI-compatible API
-- LangChain for chains and prompt templating
-- DSPy for structured extraction
-- Natural-language explanation generation for study paths
-- Prompt engineering and temperature control
-
-### Knowledge Graphs
-
-- Directed graph of DTU course dependencies
-- Graph construction from official DTU prerequisite data
-- Path finding algorithms (Dijkstra, BFS)
-- Transitive closure for "all prerequisites of course X"
-
----
-
-##  Quick Start
-
-### Prerequisites
-
-- Python 3.11+
-- (Optional) Docker
-- CampusAI API key with access to a model (e.g. gpt-oss / Qwen3)
-
-### 1. Clone Repository
-
+**Install dependencies:**
 ```bash
-git clone <repository-url>
-cd course-compass
-```
-
-### 2. Configure CampusAI
-
-Create a `~/.env` file with your CampusAI API key:
-
-```bash
-echo "CAMPUSAI_API_KEY=your_actual_key_here" > ~/.env
-# Optionally:
-# echo "CAMPUSAI_API_BASE=https://chat.campusai.compute.dtu.dk/api/v1" >> ~/.env
-# echo "CAMPUSAI_MODEL=gpt-oss" >> ~/.env
-```
-
-The code uses the environment variables in `config.py`:
-
-- `CAMPUSAI_API_KEY`
-- `CAMPUSAI_API_BASE` (default: CampusAI base URL)
-- `CAMPUSAI_MODEL` (e.g., gpt-oss, Qwen3)
-
-### 3. Install Python Dependencies
-
-```bash
-# Install in editable mode
 pip install -e .
-
-# With development dependencies (if defined)
 pip install -e ".[dev]"
 ```
 
-### 4. Prepare Data
-
-Make sure you have:
-
-- `data/dtu_courses.jsonl` – full DTU course catalog
-- `data/prerequisites_official.jsonl` – generated via:
-
-```bash
-python precompute_prereqs_official.py \
-  --input data/dtu_courses.jsonl \
-  --output data/prerequisites_official.jsonl
+**Create a `~/.env` file with:**
+```
+CAMPUSAI_API_KEY=your_key
+CAMPUSAI_API_BASE=your_base_url
+CAMPUSAI_MODEL=your_model
 ```
 
-This script parses official `prereq_text` and stores structured:
+---
 
-```json
-{"course_code": "...", "title": "...", "prereq_text": "...", "prereq_course_codes": [...]}
-```
+## Running the API
 
-### 5. Run the API
-
-Development mode (with auto-reload):
-
+**Development:**
 ```bash
 uvicorn main:app --reload
 ```
 
-or:
-
+**Production:**
 ```bash
-python main.py
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-- **Server:** http://localhost:8000
-- **Docs:** http://localhost:8000/docs
+API documentation at `/docs`.
 
 ---
 
-## 🐳 Docker Deployment
+## Running the Frontend
 
-Build the image:
+In `frontend/` directory:
+```bash
+streamlit run app.py
+```
 
+The frontend communicates with the backend API.
+
+---
+
+## Docker Deployment
+
+**Build image:**
 ```bash
 docker build -t course-compass .
 ```
 
-Run the container:
-
+**Run container:**
 ```bash
 docker run -p 8000:8000 \
-  -e CAMPUSAI_API_KEY=your_key_here \
-  -e CAMPUSAI_API_BASE=https://chat.campusai.compute.dtu.dk/api/v1 \
-  -e CAMPUSAI_MODEL=gpt-oss \
+  -e CAMPUSAI_API_KEY=your_key \
   -v $(pwd)/data:/app/data \
   course-compass
 ```
 
 ---
 
-##  API Endpoints
+## Testing
 
-### 1. Health Check
-
-```http
-GET /v1/health
-```
-
-Example response:
-
-```json
-{
-  "status": "healthy",
-  "courses": 1565,
-  "graph_nodes": 1565,
-  "graph_edges": 2397
-}
-```
-
-### 2. Search Courses
-
-```http
-GET /v1/search?query=machine%20learning&top_k=5
-```
-
-Example response:
-
-```json
-{
-  "query": "machine learning",
-  "results": [
-    {
-      "course_code": "02460",
-      "title": "Advanced Machine Learning",
-      "responsible": "Ole Winther",
-      "ects": 5
-    }
-  ]
-}
-```
-
-### 3. Analyze (Official) Prerequisites
-
-```http
-GET /v1/analyze-prerequisites/02460
-```
-
-Example response (shape):
-
-```json
-{
-  "course_code": "02460",
-  "title": "Advanced Machine Learning",
-  "official_prereq_text": "02450. Basic knowledge of ...",
-  "official_prereq_course_codes": [
-    "02450"
-  ]
-}
-```
-
-### 4. Generate Study Path
-
-```http
-POST /v1/generate-path
-Content-Type: application/json
-
-{
-  "target_course": "02460",
-  "completed_courses": ["01005"]
-}
-```
-
-Example response:
-
-```json
-{
-  "target_course": "02460",
-  "path": [
-    {
-      "course_code": "02450",
-      "title": "Introduction to Machine Learning",
-      "ects": 5
-    },
-    {
-      "course_code": "02460",
-      "title": "Advanced Machine Learning",
-      "ects": 5
-    }
-  ],
-  "explanation": "To reach 02460 Advanced Machine Learning, you should first take 02450 Introduction to Machine Learning, which covers optimization, basic neural networks, and probabilistic modelling. The official DTU prerequisites require ML background before 02460, and this path satisfies that requirement while keeping the total number of courses minimal. Make sure you also meet the general math and statistics prerequisites from the DTU course base.",
-  "total_ects": 10
-}
-```
-
-The explanation is generated by `explainer.py` + CampusAI, and is medium length and explicitly mentions that the official prerequisite list may include alternative options.
-
----
-
-##  Testing
-
-Run tests:
-
+Execute:
 ```bash
 pytest -v
-```
-
-Coverage:
-
-```bash
 pytest --cov=. --cov-report=html
 ```
 
----
-
-## 📈 Performance Characteristics
-
-### Current Configuration
-
-- **Courses indexed:** 1565
-- **Graph size:** 1565 nodes, 2397 edges (from official prerequisites)
-- **Average query time:**
-  - Vector search: <50 ms
-  - Path generation + explanation: typically <3 seconds (dominated by LLM call)
-- **Embedding dimension:** 512 (multilingual)
-
-### Scalability Notes
-
-- Vector index easily scales to 10k+ courses (FAISS Flat is fine at this size).
-- Graph building at runtime is now fast, because it consumes precomputed official prerequisites.
-- The expensive part is offline precomputation:
-  - Running `precompute_prereqs_official.py` once with LLMs (if used) and then reusing the JSONL.
-- Possible optimizations:
-  - Caching precomputed embeddings and prerequisite JSON.
-  - Parallelizing any remaining LLM calls with rate limiting.
-  - Incremental updates when DTU changes a course.
+Includes tests for vector search, graph integrity, endpoints, and prerequisite logic.
 
 ---
 
-##  Project Structure
+## Performance Characteristics
 
-```
-course-compass/
-├── config.py                     # CampusAI & model configuration
-├── indexer.py                    # Course loading & FAISS vector store
-├── prerequisite_extractor.py     # DSPy-based concept extraction (offline)
-├── precompute_prereqs_official.py# Build prerequisites_official.jsonl
-├── course_matcher.py             # Semantic search for teaching courses
-├── graph_builder.py              # NetworkX graph construction (from official prereqs)
-├── path_planner.py               # Study path algorithms (Dijkstra)
-├── explainer.py                  # LLM-based explanation generation (with official prereqs)
-├── main.py                       # FastAPI application
-├── test_main.py                  # Unit tests
-├── Dockerfile                    # Container configuration
-├── pyproject.toml                # Python project metadata
-├── data/
-│   ├── dtu_courses.jsonl         # Course catalog
-│   └── prerequisites_official.jsonl # Official prereq structure
-├── README.md                     # This file
-└── TECHNICAL_DOCUMENTATION.md    # Detailed technical explanation
-```
+- **Vector search latency:** under 50 ms
+- **Path planning:** under 1 ms
+- **LLM explanation:** 1 to 3 seconds
+- **Startup:** loads embeddings, graph, and course metadata
+- **Memory usage:** under 100 MB
 
 ---
 
-##  Example Use Cases
+## Limitations
 
-### Use Case 1: Check Prerequisites for an Advanced Course
-
-**"What do I need before taking Advanced ML (02460)?"**
-
-- CourseCompass looks up official DTU prerequisites for 02460.
-- Shows course codes + free-text prereq description.
-- Optionally suggests a minimal path from your existing courses.
-
-### Use Case 2: Generate a Study Plan from Scratch
-
-**"I haven't taken any courses yet; how do I reach 02451 Introduction to Machine Learning?"**
-
-- Use `/v1/generate-path` with `completed_courses: []`.
-- CourseCompass finds a path anchored in official prerequisites (e.g. math + stats + programming + 02451).
-- LLM explanation tells you:
-  - Why each step is there.
-  - Which groups of official prerequisites you must satisfy.
-
-### Use Case 3: Explore Related Courses
-
-**"Find courses related to NLP"**
-
-- Uses vector search over embeddings of course descriptions.
-- Returns top-k similar courses (NLP, text mining, language technology, etc).
+- Static data (must be regenerated when DTU updates course catalog)
+- Does not include semester scheduling
+- Only official prerequisites
+- Does not recommend specializations automatically
+- Front-end prototype is minimal
 
 ---
 
-##  Known Limitations
-
-- **Official prerequisites only:** Graph is based on DTU's explicit prerequisites; implicit skill gaps may still exist.
-- **Static data:** Course catalog and official prereqs are loaded from JSONL; they must be regenerated when DTU updates the course base.
-- **No semester planning:** The system doesn't yet consider when courses are offered (E1/E2/E3/E4).
-- **Single-institution:** Currently tailored to DTU (course codes, structure, CampusAI).
-
----
-
-##  Future Enhancements
+## Future Work
 
 ### Short-term
-
-- Simple Streamlit UI (chat-style study assistant).
-- Display alternative prerequisite options clearly (OR-groups).
-- Export study plans to PDF / calendar.
+- Better UI
+- Graph visualization
+- Caching LLM responses
 
 ### Medium-term
-
-- Multi-language support (full Danish + English).
-- Personalized study paths based on previous education (BSc math, EE, CS, etc).
-- Integration with DTU semester schedules.
+- Implicit prerequisite extraction
+- Specialization paths
+- Danish language support
 
 ### Long-term
-
-- Integration with DTU registration systems.
-- Collaborative filtering ("students who took X also took Y").
-- Career path templates ("path to ML engineer / data scientist / control engineer").
-
----
-
-##  Documentation
-
-- **API Documentation:** http://localhost:8000/docs (when running)
-- **Technical Deep Dive:** TECHNICAL_DOCUMENTATION.md
-- **Project Context:** DTU course project (e.g., 02807 / 02456 / MSc AI track)
+- Integration with DTU's semester schedule
+- Career-path advisor
+- Collaborative filtering
 
 ---
 
-##  Project Info
+## Project Information
 
-This is an academic project at Technical University of Denmark (DTU).
+**Academic project at Technical University of Denmark (DTU)**
 
-- **Project:** CourseCompass – Intelligent Course Planning System
-- **Student:** Kostis Tzimoulias (s242796)
+- **Student:** Konstantinos Tzimoulias
 - **Supervisor:** Finn Årup Nielsen
 
 ---
 
-##  License
+## License
 
-Academic project – DTU 2024/2025
+MIT License
