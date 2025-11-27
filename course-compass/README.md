@@ -434,7 +434,7 @@ course-compass/
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 ### Short-term
 
