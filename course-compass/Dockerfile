@@ -2,29 +2,27 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+# System dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy pyproject.toml first (for layer caching)
-COPY pyproject.toml .
-COPY README.md .
+# Install dependencies from pyproject.toml first (cache efficient)
+COPY pyproject.toml ./
+COPY README.md ./
+RUN pip install .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir .
+# Copy full project
+COPY . .
 
-# Copy application code
-COPY *.py .
-
-# Create data directory
+# Ensure data directory exists
 RUN mkdir -p data
 
 EXPOSE 8000
 
-ENV PYTHONUNBUFFERED=1
-
+# Use urllib (stdlib) instead of requests for healthcheck
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-    CMD python -c "import requests; requests.get('http://localhost:8000/v1/health')"
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/v1/healt
