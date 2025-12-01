@@ -204,21 +204,6 @@ self.english_intensifiers = {
 
 Well under the 200 MB requirement! 
 
-## Future Improvements (Day 2 & 3)
-
-### Day 2: ML Model Comparison
-- [ ] Train scikit-learn model (Logistic Regression)
-- [ ] Compare dictionary vs ML approach
-- [ ] Measure accuracy vs size trade-offs
-- [ ] Document findings
-
-### Day 3: Production Ready
-- [ ] Add caching
-- [ ] Rate limiting
-- [ ] Logging
-- [ ] Monitoring endpoints
-- [ ] Performance benchmarks
-
 ##  Assignment Questions Answered
 
 ### Q: What are pros/cons of dictionary, ML, and LLMs?
